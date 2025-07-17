@@ -30,7 +30,7 @@ function Home() {
         <motion.p initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.6 }}>
           Stay updated on events, careers, and opportunities.
         </motion.p>
-        <motion.a href="/register" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <motion.a href="/Register" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <button className="cta-button">Join Now</button>
         </motion.a>
       </section>
