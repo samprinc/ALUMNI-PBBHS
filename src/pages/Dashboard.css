@@ -1,0 +1,137 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: maroon;
+  color: white;
+  width: 250px;
+  min-height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transform: translateX(0);
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+.sidebar.expanded {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: transparent;
+  color: rgb(245, 20, 20);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+    transition: transform 0.3s ease;    
+}
+
+.user-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.user-info .avatar {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: maroon;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sidebar nav {
+  margin-top: 2rem;
+}
+
+.sidebar nav button {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border: none;
+  background: #800000;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.sidebar nav button:hover {
+  background-color: #a52a2a;
+}
+
+.dashboard-layout.collapsed .sidebar nav button,
+.dashboard-layout.collapsed .user-info p,
+.dashboard-layout.collapsed .sidebar-header h2 {
+  display: none;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard-layout.collapsed .main-content {
+  margin-left: 70px;
+}
+
+.dashboard-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #a52a2a;
+  border-bottom: 1px solid #ccc;
+}
+
+.dashboard-body {
+  padding: 1.5rem;
+  background-color: #fafafa;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    z-index: 999;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar.collapsed {
+    left: -250px;
+  }
+}
