@@ -7,7 +7,7 @@ function Gallery() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/alumni/gallery/")
+      .get("https://alumni-backend-sjku.onrender.com/api/alumni/gallery/")
       .then((response) => setImages(response.data))
       .catch((error) => console.error("Error fetching gallery:", error));
   }, []);

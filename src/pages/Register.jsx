@@ -29,7 +29,7 @@ function Register() {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/alumni/register/', form);
+      const response = await axios.post('https://alumni-backend-sjku.onrender.com/api/alumni/register/', form);
 
       if (response.status === 201) {
         setSuccess('Registration successful! You can now log in.');

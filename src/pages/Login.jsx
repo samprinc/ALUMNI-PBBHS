@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:8000/api/token/', {
+      const res = await axios.post('https://alumni-backend-sjku.onrender.com/api/token/', {
         username: form.email,
         password: form.password,
       });

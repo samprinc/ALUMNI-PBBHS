@@ -10,7 +10,7 @@ function Events() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/alumni/events/");
+        const res = await axios.get("https://alumni-backend-sjku.onrender.com/api/alumni/events/");
         const today = new Date();
 
         // Categorize events as upcoming or past based on the date
