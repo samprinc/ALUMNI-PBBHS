@@ -55,6 +55,9 @@ function Home() {
         >
           <img src={alumniImg} alt="Alumni Event" />
           <img src={bannerImg} alt="Banner" />
+          <img src={alumniImg} alt="Alumni Gathering" />
+
+          <img src={bannerImg} alt="Banner" />
           {/* Add more images here */}
         </motion.div>
         <Link to="/gallery">
