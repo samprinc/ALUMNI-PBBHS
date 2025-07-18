@@ -1,66 +1,61 @@
-.home-container {
-  padding: 2rem;
+/* Reset default body margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.hero {
-  background-color: #800000;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.cta {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.cta button {
-  background-color: #800000;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-}
+/* Main wrapper */
 .home-container {
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* Hero Section */
 .hero {
-  height: 75vh;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  background-image: url('your-image.jpg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
-  position: relative;
-  padding: 20px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+/* Overlay */
 .hero::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
+/* Text on top of the hero image */
 .hero-content {
   z-index: 2;
+  color: white;
+  padding: 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero p {
-  font-size: 1.3rem;
+.hero-content p {
+  font-size: 1.5rem;
 }
 
+/* CTA Section */
 .cta {
   background: #f4f4f4;
   padding: 40px 20px;
@@ -68,25 +63,30 @@
 }
 
 .cta h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .cta p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
 .cta-button {
   padding: 12px 25px;
   font-size: 1rem;
   background-color: #800000;
-  color: #f81d1d;
+  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
+.cta-button:hover {
+  background-color: #a00000;
+}
+
 
 .cta-button:hover {
   background-color: #a00000;
