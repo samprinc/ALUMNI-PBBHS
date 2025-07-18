@@ -35,7 +35,7 @@ function Navbar() {
         </button>
         <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <li><Link to="/" onClick={() => setMenuOpen(false)} className={location.pathname === "/" ? "active" : ""}>Home</Link></li>
-          <li><Link to="/join" onClick={() => setMenuOpen(false)} className={location.pathname === "/join" ? "active" : ""}>Join</Link></li>
+          <li><Link to="/Register" onClick={() => setMenuOpen(false)} className={location.pathname === "/join" ? "active" : ""}>Join</Link></li>
           <li><Link to="/events" onClick={() => setMenuOpen(false)} className={location.pathname === "/events" ? "active" : ""}>Events</Link></li>
           <li><Link to="/alumni" onClick={() => setMenuOpen(false)} className={location.pathname === "/alumni" ? "active" : ""}>Alumni</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)} className={location.pathname === "/contact" ? "active" : ""}>Contact</Link></li>

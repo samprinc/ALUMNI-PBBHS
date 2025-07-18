@@ -11,7 +11,7 @@ function Footer() {
         {/* Brand/Logo Section */}
         <div className="footer-section">
           <h2 className="logo-text">Paul Boit Alumni</h2>
-          <p>Fidelite en am • Since 1987</p>
+          <p>Fidélité et Amitié • Since 1987</p>
         </div>
 
         {/* Navigation Links */}
