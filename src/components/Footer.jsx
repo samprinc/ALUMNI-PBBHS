@@ -30,8 +30,7 @@ function Footer() {
         {/* Contact Section */}
         <div className="footer-section">
           <h4>Contact Us</h4>
-          <p><FaEnvelope /> alumni@paulboit.ac.ke</p>
-          <p><FaPhone /> +254 712 345678</p>
+          <p><FaPhone /> +254 718 659480</p>
 
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>

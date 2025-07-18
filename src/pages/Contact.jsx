@@ -8,8 +8,7 @@ function Contact() {
       <p>You can reach the Paul Boit Alumni Office at:</p>
 
       <ul>
-        <li><strong>Email:</strong> paulboitalumni@gmail.com</li>
-        <li><strong>Phone:</strong> +254 712 345 678</li>
+        <li><strong>Phone:</strong> +254 718 659480</li>
         <li><strong>Location:</strong> Paul Boit Boys High School, Eldoret</li>
       </ul>
 

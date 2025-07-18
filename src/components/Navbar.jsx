@@ -7,7 +7,6 @@ function Navbar() {
   const location = useLocation();
   const navRef = useRef();
 
-  // Close menu when clicking or tapping outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuOpen && navRef.current && !navRef.current.contains(event.target)) {
@@ -16,7 +15,7 @@ function Navbar() {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside); // for touch devices
+    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -27,7 +26,10 @@ function Navbar() {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="navbar-container">
-        <div className="navbar-logo">Paul Boit Alumni</div>
+        <div className="navbar-logo">
+          <img src="/Alumni1.jpeg" alt="Paul Boit Logo" className="logo-img" />
+          <span className="logo-text">Pbhs Alumni</span>
+        </div>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </button>
