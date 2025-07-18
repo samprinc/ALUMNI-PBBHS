@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Home.css';
+import { Link } from 'react-router-dom';
 import Events from '../pages/Events';
-import bannerImg from '../assets/DSC_0261.jpg'; // Add a nice hero image here
-import alumniImg from '../assets/DSC_0263.jpg'; // Optional: Group photo
+import bannerImg from '../assets/DSC_0261.jpg';
+import alumniImg from '../assets/DSC_0263.jpg';
 
 function Home() {
   return (
@@ -27,12 +28,14 @@ function Home() {
         <motion.h2 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
           Join Our Alumni Family
         </motion.h2>
-        <motion.p initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.6 }}>
-          Stay updated on events, careers, and opportunities.
-        </motion.p>
-        <motion.a href="/Register" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <button className="cta-button">Join Now</button>
-        </motion.a>
+<motion.p initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.6 }}>
+  Stay updated on events, careers, and opportunities.
+</motion.p>
+<Link to="/register">
+  <motion.button className="cta-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    Join Now
+  </motion.button>
+</Link>
       </section>
 
       {/* Events Preview */}
@@ -54,9 +57,9 @@ function Home() {
           <img src={bannerImg} alt="Banner" />
           {/* Add more images here */}
         </motion.div>
-        <a href="/gallery">
+        <Link to="/gallery">
           <button className="cta-button">View Full Gallery</button>
-        </a>
+        </Link>
       </section>
 
     </div>
